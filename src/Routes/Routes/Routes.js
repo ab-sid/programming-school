@@ -27,11 +27,8 @@ export const routes = createBrowserRouter([
                 element: <Courses></Courses>
             },
             {
-                path: '/course/:courseId',
-                loader: async ({ params }) => {
-                    console.log(params.courseId);
-                    // return fetch(`https://jsonplaceholder.typicode.com/users/${params.courseId}`)
-                },
+                path: '/course/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`),
                 element: <CourseDetails></CourseDetails>
             },
             {
