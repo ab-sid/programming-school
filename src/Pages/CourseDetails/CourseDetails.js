@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import NewsSummer from '../NewsSummer/NewsSummer';
+import CourseSummery from '../CourseSummery/CourseSummery';
 import './CourseDetails.css';
 
 
@@ -11,7 +11,7 @@ const CourseDetails = () => {
 
     return (
         <div className='card-details'>
-            {allNews.map(news => <NewsSummer key={news._id} news={news}></NewsSummer>)}
+            {allNews.map(news => <CourseSummery key={news._id} news={news}></CourseSummery>)}
         </div>
     );
 };

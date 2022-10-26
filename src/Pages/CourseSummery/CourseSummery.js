@@ -2,31 +2,31 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import './NewsSummer.css';
 
-const NewsSummer = ({ news }) => {
+const CourseSummery = ({ news }) => {
     console.log(news);
-    const { image_url, title, details } = news;
+    const { image_url, title, details, _id } = news;
     return (
         <div>
-
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={image_url} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
                         {
-                            details.length > 250 ?
-                                <p>{details.slice(0, 250) + '...'}<Link>ReadMore</Link></p>
+                            details.length > 200 ?
+                                <p>{details.slice(0, 200) + '...'}<Link to={`/single_course_details/${_id}`}>ReadMore</Link></p>
                                 :
                                 <p>{details}</p>
                         }
                     </Card.Text>
-                    <Button variant="primary">Get premium access</Button>
+                    <Link to={`/single_course_details/${_id}`}>
+                        <Button variant="primary">Get premium access</Button>
+                    </Link>
                 </Card.Body>
             </Card>
         </div>
     );
 };
 
-export default NewsSummer;
+export default CourseSummery;
