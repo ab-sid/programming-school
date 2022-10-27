@@ -79,9 +79,13 @@ const Login = () => {
                 </Form.Text>
                 <p>Create a new Accout<Link to='/register'>Register</Link></p>
             </Form>
-
-            <button onClick={handleGoogleSignIn}>Google</button>
-            <button onClick={handleGithubSignIn}>GitHub</button>
+            <div className='text-center'>
+                <h4>Other Login Option</h4>
+            </div>
+            <div className='text-center'>
+                <Button onClick={handleGoogleSignIn} variant="outline-primary">Google</Button>{' '}
+                <Button onClick={handleGithubSignIn} variant="outline-success">GitHub</Button>{' '}
+            </div>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { Image } from 'react-bootstrap';
+import { FaToggleOn } from "react-icons/fa";
 import './Header.css';
 
 const Header = () => {
@@ -38,6 +39,8 @@ const Header = () => {
                             <Nav.Link><Link to='/courses'>Courses</Link></Nav.Link>
                             <Nav.Link><Link to='/faq'>FAQ</Link></Nav.Link>
                             <Nav.Link><Link to='/blog'>Blog</Link></Nav.Link>
+                            <Nav.Link><Link to='/blog'><FaToggleOn></FaToggleOn></Link></Nav.Link>
+
                             {user?.uid ?
                                 <>
                                     <Nav.Link><Link>

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
@@ -66,7 +67,9 @@ const Register = () => {
             <Form.Text className='text-danger'>
                 {error}
             </Form.Text>
+            <p>Already have an Accout?<Link to='/login'>Login</Link></p>
         </Form>
+
     );
 };
 
