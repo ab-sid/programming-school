@@ -3,6 +3,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import CourseCategory from '../CourseCategory/CourseCategory';
+import './Courses.css';
 
 const Courses = () => {
     const courses = useLoaderData();
@@ -10,8 +11,8 @@ const Courses = () => {
         <Container>
             <Row>
                 <Col lg='3'>
-                    All Courses:{courses.length}
-                    <div>
+
+                    <div className='courses-name mt-3'>
                         {
                             courses.map(course => <p key={course.id}>
                                 <Link to={`/course/${course.id}`}>{course.course_name}</Link>
@@ -19,7 +20,7 @@ const Courses = () => {
                         }
                     </div>
                 </Col>
-                <Col lg='9'>
+                <Col lg='9' className='course-cat'>
                     {courses.map(course => <CourseCategory key={course.id} course={course}></CourseCategory>)}
                 </Col>
             </Row>

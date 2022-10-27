@@ -1,0 +1,12 @@
+.course-cat {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.course-cat a {
+    text-decoration: none;
+}
+
+.courses-name a {
+    text-decoration: none;
+}
