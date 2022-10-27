@@ -8,6 +8,7 @@ import CourseDetails from "../../Pages/CourseDetails/CourseDetails";
 import SingleCourseDetails from "../../Pages/SingleCourseDetails/SingleCourseDetails";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
+import CheckOut from "../../Pages/CheckOut/CheckOut";
 
 export const routes = createBrowserRouter([
     {
@@ -38,6 +39,11 @@ export const routes = createBrowserRouter([
                 path: '/single_course_details/:id',
                 loader: ({ params }) => fetch(`http://localhost:5000/single_course_details/${params.id}`),
                 element: <SingleCourseDetails></SingleCourseDetails>
+            },
+            {
+                path: '/check_out/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/check_out/${params.id}`),
+                element: <CheckOut></CheckOut>
             },
             {
                 path: '/faq',
