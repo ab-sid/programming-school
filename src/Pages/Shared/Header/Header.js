@@ -2,11 +2,12 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import logo from '../../../assets/logo/logo2.png';
+import logo from '../../../assets/logo/logo.png';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { Image } from 'react-bootstrap';
+import './Header.css';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -26,13 +27,13 @@ const Header = () => {
                             src={logo}
                             width="30"
                             height="30"
-                            className="d-inline-block align-top"
+                            className="d-inline-block align-top rounded"
                         />{' '}
                         Programming School
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto">
+                        <Nav className="ms-auto header-link">
                             <Nav.Link><Link to='/home'>Home</Link></Nav.Link>
                             <Nav.Link><Link to='/courses'>Courses</Link></Nav.Link>
                             <Nav.Link><Link to='/faq'>FAQ</Link></Nav.Link>

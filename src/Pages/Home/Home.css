@@ -1,0 +1,15 @@
+.home-container {
+    background-image: url('../../assets/logo/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.logo-content img {
+    width: 80px;
+}
+
+.icon-1 {
+    color: green;
+    size: 100px;
+}
