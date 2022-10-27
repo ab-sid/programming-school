@@ -4,8 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../../../assets/logo/logo2.png';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { Image } from 'react-bootstrap';
 
 const Header = () => {
+    const { user } = useContext(AuthContext)
     return (
         <div>
             <Navbar bg="dark" variant="dark">
@@ -27,6 +31,14 @@ const Header = () => {
                             <Nav.Link><Link to='/courses'>Courses</Link></Nav.Link>
                             <Nav.Link><Link to='/faq'>FAQ</Link></Nav.Link>
                             <Nav.Link><Link to='/blog'>Blog</Link></Nav.Link>
+                            <Nav.Link><Link to='/login'>Login</Link></Nav.Link>
+                            <Nav.Link><Link>{user?.displayName}</Link></Nav.Link>
+                            <Nav.Link><Link>
+                                {user.photoURL ?
+                                    <Image style={{ height: '40px' }} roundedCircle src={user.photoURL}></Image>
+                                    : <p>nai</p>
+                                }
+                            </Link></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

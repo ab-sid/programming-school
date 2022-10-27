@@ -8,7 +8,7 @@ const CourseSummery = ({ news }) => {
     const { image_url, title, details, _id } = news;
     return (
         <div>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem' }} className="mt-5">
                 <Card.Img variant="top" src={image_url} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
@@ -20,9 +20,7 @@ const CourseSummery = ({ news }) => {
                                 <p>{details}</p>
                         }
                     </Card.Text>
-                    <Link to={`/single_course_details/${_id}`}>
-                        <Button variant="primary">Get premium access</Button>
-                    </Link>
+
                 </Card.Body>
             </Card>
         </div>
