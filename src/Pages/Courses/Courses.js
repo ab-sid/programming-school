@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import CourseCategory from '../CourseCategory/CourseCategory';
 import './Courses.css';
@@ -10,12 +10,15 @@ const Courses = () => {
     return (
         <Container>
             <Row>
-                <Col lg='3'>
+                <Col className='d-none d-lg-block' lg='3'>
 
                     <div className='courses-name mt-3'>
                         {
                             courses.map(course => <p key={course.id}>
-                                <Link to={`/course/${course.id}`}>{course.course_name}</Link>
+                                <Button variant="outline-success">
+                                    <Link to={`/course/${course.id}`}>{course.course_name}</Link>
+                                </Button>{' '}
+
                             </p>)
                         }
                     </div>

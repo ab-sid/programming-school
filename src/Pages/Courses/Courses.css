@@ -3,10 +3,28 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+
 .course-cat a {
     text-decoration: none;
 }
 
 .courses-name a {
     text-decoration: none;
+    color: #000;
+}
+
+.courses-name button :hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.course-name:hover {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .course-cat {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

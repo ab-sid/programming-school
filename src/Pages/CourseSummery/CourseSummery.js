@@ -8,7 +8,7 @@ const CourseSummery = ({ news }) => {
     return (
         <div>
             <Card style={{ width: '18rem' }} className="mt-5">
-                <Card.Img variant="top" src={image_url} />
+                <Card.Img style={{ height: '200px' }} variant="top" src={image_url} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>

@@ -28,23 +28,23 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses',
                 loader: () => {
-                    return fetch('http://localhost:5000/courses')
+                    return fetch(' https://assignment-10-server-pink.vercel.app/courses')
                 },
                 element: <Courses></Courses>
             },
             {
                 path: '/course/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`),
+                loader: ({ params }) => fetch(` https://assignment-10-server-pink.vercel.app/course/${params.id}`),
                 element: <CourseDetails></CourseDetails>
             },
             {
                 path: '/single_course_details/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/single_course_details/${params.id}`),
+                loader: ({ params }) => fetch(` https://assignment-10-server-pink.vercel.app/single_course_details/${params.id}`),
                 element: <SingleCourseDetails></SingleCourseDetails>
             },
             {
                 path: '/check_out/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/check_out/${params.id}`),
+                loader: ({ params }) => fetch(` https://assignment-10-server-pink.vercel.app/check_out/${params.id}`),
                 element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>
             },
             {

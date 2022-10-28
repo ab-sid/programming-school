@@ -1,9 +1,9 @@
 #Site Name : Programming School
-#Live Site Link: https://effortless-capybara-13f279.netlify.app/
+#Live Site Link:  https://assignment-10-e16c8.web.app
 *This is a Programming Language Learning site
 *Here are 6 category courses
 *Under Every category courses have some related course
-*in this projects added many features such as: private route, firebase authentication etc
+*in this projects added many features such as: SPA, private route, firebase authentication etc
 
 
 # Getting Started with Create React App

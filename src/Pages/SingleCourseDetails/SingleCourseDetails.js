@@ -11,8 +11,8 @@ const SingleCourseDetails = () => {
             <Card className='mt-5'>
                 <Card.Header>
                     <div className='d-flex justify-content-between'>
-                        <div><h5>Auther Name: {author.name}</h5></div>
-                        <div><button>Download PDF</button></div>
+                        <div><h5>Auther Name: {author.name ? author.name : 'Aurthor Name Not Found'}</h5></div>
+                        <div><Button variant="outline-secondary">Download PDF</Button>{' '}</div>
                     </div>
                 </Card.Header>
                 <Card.Img variant="top" src={image_url} />
@@ -22,7 +22,7 @@ const SingleCourseDetails = () => {
                         {details}
                     </Card.Text>
                     <Link to={`/check_out/${_id}`}>
-                        <Button variant="primary">Get premium access</Button>
+                        <Button variant="outline-primary">Get premium access</Button>
                     </Link>
                 </Card.Body>
             </Card>
